@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.9.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:datanotation="http:///datanotation.ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation">
+  <SQLSchema:Database xmi:id="_jwPBkP1MEei77OZJ-BzoqQ" name="Database" vendor="MySql" version="5.1" schemas="_jy6iIP1MEei77OZJ-BzoqQ"/>
+  <SQLSchema:Schema xmi:id="_jy6iIP1MEei77OZJ-BzoqQ" name="Schema" database="_jwPBkP1MEei77OZJ-BzoqQ">
+    <eAnnotations xmi:id="_jzqJAP1MEei77OZJ-BzoqQ" source="diagram">
+      <contents xsi:type="datanotation:DataDiagram" xmi:id="_jzqJAf1MEei77OZJ-BzoqQ" type="IE_CrowFoot" name="Diagram1" viewKind="ProjectExplorer" notation="IE_CrowFoot" kind="Physical">
+        <styles xsi:type="datanotation:DataAttributeStyle" xmi:id="_jzqJAv1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="datanotation:DataCompartmentStyle" xmi:id="_jzqJA_1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="datanotation:DataDisplayStyle" xmi:id="_jzqJBP1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="datanotation:DataDiagramRelationshipStyle" xmi:id="_jzqJBf1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="datanotation:DataShapeNameStyle" xmi:id="_jzqJBv1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="datanotation:DataDiagramFormattingStyle" xmi:id="_jzqJB_1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="notation:SortingStyle" xmi:id="_jzqJCP1MEei77OZJ-BzoqQ" sortingKeys="Natural:Ascending"/>
+        <styles xsi:type="notation:FilteringStyle" xmi:id="_jzqJCf1MEei77OZJ-BzoqQ"/>
+        <styles xsi:type="datanotation:ConnectionLayerStyle" xmi:id="_jzqJCv1MEei77OZJ-BzoqQ"/>
+        <element xsi:nil="true"/>
+      </contents>
+    </eAnnotations>
+  </SQLSchema:Schema>
+</xmi:XMI>
