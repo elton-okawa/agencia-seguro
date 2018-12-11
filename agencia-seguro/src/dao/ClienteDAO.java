@@ -21,7 +21,7 @@ public class ClienteDAO extends DAO<Cliente>{
 	
 	public boolean create(Cliente cliente) throws SQLException {
 		String query = 
-				String.format(Locale.US, "INSERT INTO Cliente (CPF, Nome, RG, Telefone, Email, Endereco, "
+				String.format(Locale.US, "INSERT INTO ClienteDB (CPF, Nome, RG, Telefone, Email, Endereco, "
 						+ "IdCliente, DataPrimeiraCompra)"
 						+ " VALUES ('%s', '%s', '%s', '%s', '%s', '%s', %d, '%s');", 
 						cliente.getCPF(), cliente.getNome(), cliente.getRG(), cliente.getTelefone(), 
@@ -31,12 +31,12 @@ public class ClienteDAO extends DAO<Cliente>{
 	}
 	
 	public Cliente getClienteByID(int id) throws SQLException {
-		String query = String.format("SELECT * FROM Cliente WHERE IdCliente=%d", id);
+		String query = String.format("SELECT * FROM ClienteDB WHERE IdCliente=%d", id);
 		return super.getObjectByPrimaryKey(query);
 	}
 	
 	public List<Cliente> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM Cliente;");
+		String query = String.format("SELECT * FROM ClienteDB;");
 		return super.getAll(query);
 	}
 

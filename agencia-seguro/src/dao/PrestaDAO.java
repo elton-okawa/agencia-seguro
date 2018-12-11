@@ -20,17 +20,17 @@ public class PrestaDAO extends DAO<Presta>{
 	}
 	
 	public List<Presta> getAllPrestaByIdServico(int idServico) throws SQLException {
-		String query = String.format("SELECT * FROM Presta WHERE IdServico=%d", idServico);
+		String query = String.format("SELECT * FROM PrestaDB WHERE IdServico=%d", idServico);
 		return super.getAll(query);
 	}
 	
 	public List<Presta> getAllPrestaByCNPJ(String cnpj) throws SQLException {
-		String query = String.format("SELECT * FROM Presta WHERE CNPJ='%s'", cnpj);
+		String query = String.format("SELECT * FROM PrestaDB WHERE CNPJ='%s'", cnpj);
 		return super.getAll(query);
 	}
 
 	public List<Presta> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM Presta;");
+		String query = String.format("SELECT * FROM PrestaDB;");
 		return super.getAll(query);
 	}
 	

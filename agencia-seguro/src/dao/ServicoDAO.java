@@ -20,12 +20,12 @@ public class ServicoDAO extends DAO<Servico>{
 	}
 	
 	public Servico getServicoByID(int id) throws SQLException {
-		String query = String.format("SELECT * FROM Servico WHERE IdServico=%d", id);
+		String query = String.format("SELECT * FROM ServicoDB WHERE IdServico=%d", id);
 		return super.getObjectByPrimaryKey(query);
 	}
 	
 	public List<Servico> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM Servico;");
+		String query = String.format("SELECT * FROM ServicoDB;");
 		return super.getAll(query);
 	}
 	

@@ -20,27 +20,27 @@ public class RecebeDAO extends DAO<Recebe>{
 	}
 	
 	public List<Recebe> getAllRecebeByRenavam (String renavam) throws SQLException {
-		String query = String.format("SELECT * FROM Recebe WHERE Renavam = '%s'", renavam);
+		String query = String.format("SELECT * FROM RecebeDB WHERE Renavam = '%s'", renavam);
 		return super.getAll(query);
 	}
 	
 	public List<Recebe> getAllRecebeByIdServico (int idServico) throws SQLException {
-		String query = String.format("SELECT * FROM Recebe WHERE IdServico = %d", idServico);
+		String query = String.format("SELECT * FROM RecebeDB WHERE IdServico = %d", idServico);
 		return super.getAll(query);
 	}
 	
 	public List<Recebe> getAllRecebeByCNPJ (String cnpj) throws SQLException {
-		String query = String.format("SELECT * FROM Recebe WHERE CNPJ = '%s'", cnpj);
+		String query = String.format("SELECT * FROM RecebeDB WHERE CNPJ = '%s'", cnpj);
 		return super.getAll(query);
 	}
 	
 	public List<Recebe> getAllCompraByPeriod (Date intervaloInicio, Date intervaloFim) throws SQLException {
-		String query = String.format("SELECT * FROM Recebe WHERE DataInicio >= '%s' AND DataInicio <= '%s'", intervaloInicio, intervaloFim);
+		String query = String.format("SELECT * FROM RecebeDB WHERE DataInicio >= '%s' AND DataInicio <= '%s'", intervaloInicio, intervaloFim);
 		return super.getAll(query);
 	}
 	
 	public List<Recebe> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM Recebe");
+		String query = String.format("SELECT * FROM RecebeDB");
 		return super.getAll(query);
 	}
 	

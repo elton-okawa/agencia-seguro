@@ -20,12 +20,12 @@ public class PrestadorServicoDAO extends DAO<PrestadorServico>{
 	}
 	
 	public PrestadorServico getPrestadorServicoByCNPJ(String cnpj) throws SQLException {
-		String query = String.format("SELECT * FROM PrestadorServico WHERE CNPJ='%s'", cnpj);
+		String query = String.format("SELECT * FROM PrestadorServicoDB WHERE CNPJ='%s'", cnpj);
 		return super.getObjectByPrimaryKey(query);
 	}
 	
 	public List<PrestadorServico> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM PrestadorServico;");
+		String query = String.format("SELECT * FROM PrestadorServicoDB;");
 		return super.getAll(query);
 	}
 	

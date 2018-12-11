@@ -21,7 +21,7 @@ public class FuncionarioDAO extends DAO<Funcionario>{
 	
 	public boolean create(Funcionario funcionario) throws SQLException {
 		String query = 
-				String.format(Locale.US, "INSERT INTO Funcionario (CPF, Nome, RG, Telefone, Email, Endereco, "
+				String.format(Locale.US, "INSERT INTO FuncionarioDB (CPF, Nome, RG, Telefone, Email, Endereco, "
 						+ "IdFuncionario, Salario, Cargo, Periodo, DataAdmissao)"
 						+ " VALUES ('%s', '%s', '%s', '%s', '%s', '%s', "
 						+ "%d, %2.f, '%s', '%s', '%s');", 
@@ -34,12 +34,12 @@ public class FuncionarioDAO extends DAO<Funcionario>{
 	}
 	
 	public Funcionario getFuncionarioByID(int id) throws SQLException {
-		String query = String.format("SELECT * FROM Funcionario WHERE IdFuncionario=%d", id);
+		String query = String.format("SELECT * FROM FuncionarioDB WHERE IdFuncionario=%d", id);
 		return super.getObjectByPrimaryKey(query);
 	}
 	
 	public List<Funcionario> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM Funcionario;");
+		String query = String.format("SELECT * FROM FuncionarioDB;");
 		return super.getAll(query);
 	}
 

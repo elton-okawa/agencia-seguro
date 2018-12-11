@@ -21,12 +21,12 @@ public class CarroDAO extends DAO<Carro>{
 	
 	
 	public Carro getCarroByRenavam(String renavam) throws SQLException {
-		String query = String.format("SELECT * FROM Carro WHERE Renavam='%s'", renavam);
+		String query = String.format("SELECT * FROM CarroDB WHERE Renavam='%s'", renavam);
 		return super.getObjectByPrimaryKey(query);
 	}
 	
 	public List<Carro> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM Carro;");
+		String query = String.format("SELECT * FROM CarroDB;");
 		return super.getAll(query);
 	}
 	

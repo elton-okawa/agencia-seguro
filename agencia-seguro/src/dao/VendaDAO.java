@@ -20,32 +20,32 @@ public class VendaDAO extends DAO<Venda>{
 	}
 	
 	public List<Venda> getAllVendaByIdCliente (int idCliente) throws SQLException {
-		String query = String.format("SELECT * FROM Venda WHERE IdCliente=%d", idCliente);
+		String query = String.format("SELECT * FROM VendaDB WHERE IdCliente=%d", idCliente);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByIdFuncionario (int idFuncionario) throws SQLException {
-		String query = String.format("SELECT * FROM Venda WHERE IdFuncionario=%d", idFuncionario);
+		String query = String.format("SELECT * FROM VendaDB WHERE IdFuncionario=%d", idFuncionario);
 		return super.getAll(query);
 	}
 
 	public List<Venda> getAllVendaByIdRenavam (String renavam) throws SQLException {
-		String query = String.format("SELECT * FROM Venda WHERE Renavam='%s'", renavam);
+		String query = String.format("SELECT * FROM VendaDB WHERE Renavam='%s'", renavam);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByPeriod (Date intervaloInicio, Date intervaloFim) throws SQLException {
-		String query = String.format("SELECT * FROM Venda WHERE DataVenda >= '%s' AND DataVenda <= '%s'", intervaloInicio, intervaloFim);
+		String query = String.format("SELECT * FROM VendaDB WHERE DataVenda >= '%s' AND DataVenda <= '%s'", intervaloInicio, intervaloFim);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByValorMaiorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM Venda WHERE ValorVenda >= %2.f", valor);
+		String query = String.format("SELECT * FROM VendaDB WHERE ValorVenda >= %2.f", valor);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByValorMenorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM Venda WHERE ValorVenda <= %2.f", valor);
+		String query = String.format("SELECT * FROM VendaDB WHERE ValorVenda <= %2.f", valor);
 		return super.getAll(query);
 	}
 	
