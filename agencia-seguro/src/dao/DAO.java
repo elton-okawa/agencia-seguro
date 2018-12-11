@@ -14,8 +14,8 @@ public abstract class DAO<T>{
 	
 	public DAO() {
 		try {
-			Class.forName("com.maridb.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306?user=root&password=root");
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://143.107.102.7:3306/t1g8?user=t1g8&password=%25jL*-nLp");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
