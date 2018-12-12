@@ -34,7 +34,7 @@ public class RecebeDAO extends DAO<Recebe>{
 		return super.getAll(query);
 	}
 	
-	public List<Recebe> getAllCompraByPeriod (Date intervaloInicio, Date intervaloFim) throws SQLException {
+	public List<Recebe> getAllRecebeByPeriod (Date intervaloInicio, Date intervaloFim) throws SQLException {
 		String query = String.format("SELECT * FROM RecebeDB WHERE DataInicio >= '%s' AND DataInicio <= '%s'", intervaloInicio, intervaloFim);
 		return super.getAll(query);
 	}
@@ -48,7 +48,7 @@ public class RecebeDAO extends DAO<Recebe>{
 	protected Recebe instantiateObject(ResultSet resultSet) throws SQLException {
 		Recebe recebe = new Recebe();
 		recebe.setCarro(CarroDAO.getInstance().getCarroByRenavam(resultSet.getString("Renavam")));
-		recebe.setServico(ServicoDAO.getInstance().getServicoByID(resultSet.getInt("Servico")));
+		recebe.setServico(ServicoDAO.getInstance().getServicoByID(resultSet.getInt("IdServico")));
 		recebe.setPrestadorServico(
 				PrestadorServicoDAO.getInstance().getPrestadorServicoByCNPJ(resultSet.getString("CNPJ")));
 		recebe.setDataInicio(resultSet.getDate("DataInicio"));

@@ -58,6 +58,26 @@
 		</div>
 	</div>
 	
+	<div class="row mt-4">
+		<div class="col-sm-3">
+			<a class="btn btn-primary btn-block" href="ControleRecebe?type=all">Recebe</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleRecebe?type=cnpj">Recebe por CNPJ</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleRecebe?type=id">Recebe por IdServiço</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleRecebe?type=renavam">Recebe por RENAVAM</a>
+		</div>
+	</div>
+	<div class="row mt-4">
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleRecebe?type=periodo">Recebe por Período</a>
+		</div>
+	</div>
+	
 </div>
 
 <jsp:include page="common/footer.jsp" />
