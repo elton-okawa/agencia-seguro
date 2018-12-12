@@ -15,7 +15,7 @@ public class PrestaDAO extends DAO<Presta>{
 		super();
 	}
 	
-	public PrestaDAO getInstance() {
+	public static PrestaDAO getInstance() {
 		return instance;
 	}
 	

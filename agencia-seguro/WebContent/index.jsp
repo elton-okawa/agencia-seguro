@@ -46,6 +46,18 @@
 		</div>
 	</div>
 	
+	<div class="row mt-4">
+		<div class="col-sm-3">
+			<a class="btn btn-primary btn-block" href="ControlePresta?type=all">PrestaçãoDeServiço</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControlePresta?type=cnpj">PrestaçãoDeServiço por CNPJ</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControlePresta?type=id">PrestaçãoDeServiço por IdServiço</a>
+		</div>
+	</div>
+	
 </div>
 
 <jsp:include page="common/footer.jsp" />
