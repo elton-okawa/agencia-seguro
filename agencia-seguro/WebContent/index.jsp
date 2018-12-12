@@ -28,6 +28,24 @@
 		</div>
 	</div>
 	
+	<div class="row mt-4">
+		<div class="col-sm-3">
+			<a class="btn btn-primary btn-block" href="ControlePrestadorServico?type=all">PrestadorServiço</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControlePrestadorServico?type=cnpj">PrestadorServiço por CNPJ</a>
+		</div>
+	</div>
+	
+	<div class="row mt-4">
+		<div class="col-sm-3">
+			<a class="btn btn-primary btn-block" href="ControleServico?type=all">Serviços</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleServico?type=id">Serviço por id</a>
+		</div>
+	</div>
+	
 </div>
 
 <jsp:include page="common/footer.jsp" />
