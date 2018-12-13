@@ -21,7 +21,7 @@ public class CompraDAO extends DAO<Compra>{
 	}
 	
 	public List<Compra> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB");
+		String query = String.format("SELECT * FROM CompraDB ORDER BY DataCompra DESC");
 		return super.getAll(query);
 	}
 	

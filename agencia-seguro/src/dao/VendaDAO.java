@@ -20,7 +20,7 @@ public class VendaDAO extends DAO<Venda>{
 	}
 	
 	public List<Venda> getAll() throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB");
+		String query = String.format("SELECT * FROM VendaDB ORDER BY DataVenda DESC;");
 		return super.getAll(query);
 	}
 	
@@ -35,7 +35,7 @@ public class VendaDAO extends DAO<Venda>{
 	}
 
 	public List<Venda> getAllVendaByRenavam (String renavam) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE Renavam='%s'", renavam);
+		String query = String.format("SELECT * FROM VendaDB WHERE Renavam='%s';", renavam);
 		return super.getAll(query);
 	}
 	
