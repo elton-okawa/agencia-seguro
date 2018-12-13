@@ -25,32 +25,32 @@ public class VendaDAO extends DAO<Venda>{
 	}
 	
 	public List<Venda> getAllVendaByIdCliente (int idCliente) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE IdCliente=%d", idCliente);
+		String query = String.format("SELECT * FROM VendaDB WHERE IdCliente=%d ORDER BY DataVenda DESC", idCliente);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByIdFuncionario (int idFuncionario) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE IdFuncionario=%d", idFuncionario);
+		String query = String.format("SELECT * FROM VendaDB WHERE IdFuncionario=%d ORDER BY DataVenda DESC", idFuncionario);
 		return super.getAll(query);
 	}
 
 	public List<Venda> getAllVendaByRenavam (String renavam) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE Renavam='%s';", renavam);
+		String query = String.format("SELECT * FROM VendaDB WHERE Renavam='%s' ORDER BY DataVenda DESC;", renavam);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByPeriod (Date intervaloInicio, Date intervaloFim) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE DataVenda >= '%s' AND DataVenda <= '%s'", intervaloInicio, intervaloFim);
+		String query = String.format("SELECT * FROM VendaDB WHERE DataVenda >= '%s' AND DataVenda <= '%s' ORDER BY DataVenda DESC", intervaloInicio, intervaloFim);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByValorMaiorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE ValorVenda >= '%f'", valor);
+		String query = String.format("SELECT * FROM VendaDB WHERE ValorVenda >= '%f' ORDER BY ValorVenda DESC", valor);
 		return super.getAll(query);
 	}
 	
 	public List<Venda> getAllVendaByValorMenorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM VendaDB WHERE ValorVenda <= '%f'", valor);
+		String query = String.format("SELECT * FROM VendaDB WHERE ValorVenda <= '%f' ORDER BY ValorVenda DESC", valor);
 		return super.getAll(query);
 	}
 	

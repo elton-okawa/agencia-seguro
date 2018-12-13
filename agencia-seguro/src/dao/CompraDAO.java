@@ -26,32 +26,32 @@ public class CompraDAO extends DAO<Compra>{
 	}
 	
 	public List<Compra> getAllCompraByIdCliente (int idCliente) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE IdCliente=%d", idCliente);
+		String query = String.format("SELECT * FROM CompraDB WHERE IdCliente=%d ORDER BY DataCompra DESC", idCliente);
 		return super.getAll(query);
 	}
 	
 	public List<Compra> getAllCompraByIdFuncionario (int idFuncionario) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE IdFuncionario=%d", idFuncionario);
+		String query = String.format("SELECT * FROM CompraDB WHERE IdFuncionario=%d ORDER BY DataCompra DESC", idFuncionario);
 		return super.getAll(query);
 	}
 
 	public List<Compra> getAllCompraByRenavam (String renavam) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE Renavam='%s'", renavam);
+		String query = String.format("SELECT * FROM CompraDB WHERE Renavam='%s' ORDER BY DataCompra DESC", renavam);
 		return super.getAll(query);
 	}
 	
 	public List<Compra> getAllCompraByPeriod (Date intervaloInicio, Date intervaloFim) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE DataCompra >= '%s' AND DataCompra <= '%s'", intervaloInicio, intervaloFim);
+		String query = String.format("SELECT * FROM CompraDB WHERE DataCompra >= '%s' AND DataCompra <= '%s' ORDER BY DataCompra DESC", intervaloInicio, intervaloFim);
 		return super.getAll(query);
 	}
 	
 	public List<Compra> getAllCompraByValorMaiorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra >= '%f'", valor);
+		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra >= '%f' ORDER BY ValorCompra DESC", valor);
 		return super.getAll(query);
 	}
 	
 	public List<Compra> getAllCompraByValorMenorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra <= '%f'", valor);
+		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra <= '%f' ORDER BY ValorCompra DESC", valor);
 		return super.getAll(query);
 	}
 	
