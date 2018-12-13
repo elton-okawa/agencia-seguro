@@ -11,19 +11,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.RecebeDAO;
+import dao.VendaDAO;
 
 /**
- * Servlet implementation class ControleRecebe
+ * Servlet implementation class ControleVenda
  */
-@WebServlet("/ControleRecebe")
-public class ControleRecebe extends HttpServlet {
+@WebServlet("/ControleVenda")
+public class ControleVenda extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControleRecebe() {
+    public ControleVenda() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,24 +37,28 @@ public class ControleRecebe extends HttpServlet {
 		try {
 			switch (tipo) {
 				case "all":
-					request.setAttribute("recebeList", RecebeDAO.getInstance().getAll());
-					requestDispatcher = getServletContext().getRequestDispatcher("/recebe/recebeAll.jsp");
+					request.setAttribute("vendaList", VendaDAO.getInstance().getAll());
+					requestDispatcher = getServletContext().getRequestDispatcher("/venda/vendaAll.jsp");
 					requestDispatcher.forward(request, response);
 					break;
-				case "cnpj":
-					requestDispatcher = getServletContext().getRequestDispatcher("/recebe/recebeCnpj.jsp");
+				case "idCliente":
+					requestDispatcher = getServletContext().getRequestDispatcher("/venda/vendaIdCliente.jsp");
 					requestDispatcher.forward(request, response);
 					break;
-				case "id":
-					requestDispatcher = getServletContext().getRequestDispatcher("/recebe/recebeIdServico.jsp");
+				case "idFuncionario":
+					requestDispatcher = getServletContext().getRequestDispatcher("/venda/vendaIdFuncionario.jsp");
 					requestDispatcher.forward(request, response);
 					break;
 				case "renavam":
-					requestDispatcher = getServletContext().getRequestDispatcher("/recebe/recebeRenavam.jsp");
+					requestDispatcher = getServletContext().getRequestDispatcher("/venda/vendaRenavam.jsp");
 					requestDispatcher.forward(request, response);
 					break;
 				case "periodo":
-					requestDispatcher = getServletContext().getRequestDispatcher("/recebe/recebePeriodo.jsp");
+					requestDispatcher = getServletContext().getRequestDispatcher("/venda/vendaPeriodo.jsp");
+					requestDispatcher.forward(request, response);
+					break;
+				case "valor":
+					requestDispatcher = getServletContext().getRequestDispatcher("/venda/vendaValor.jsp");
 					requestDispatcher.forward(request, response);
 					break;
 			}
@@ -71,18 +75,22 @@ public class ControleRecebe extends HttpServlet {
 		final String tipo = (String) request.getParameter("type");
 		try {
 			switch (tipo) {
-				case "cnpj":
-					request.setAttribute("recebeList", RecebeDAO.getInstance().getAllRecebeByCNPJ((String)request.getParameter("cnpj")));
+				case "idCliente":
+					request.setAttribute("vendaList", VendaDAO.getInstance().getAllVendaByIdCliente(Integer.valueOf((String)request.getParameter("idCliente"))));
 					break;
-				case "id":
-					request.setAttribute("recebeList", RecebeDAO.getInstance().getAllRecebeByIdServico(Integer.valueOf((String)request.getParameter("idServico"))));
+				case "idFuncionario":
+					request.setAttribute("vendaList", VendaDAO.getInstance().getAllVendaByIdFuncionario(Integer.valueOf((String)request.getParameter("idFuncionario"))));
 					break;
 				case "renavam":
-					request.setAttribute("recebeList", RecebeDAO.getInstance().getAllRecebeByRenavam((String)request.getParameter("renavam")));
+					request.setAttribute("vendaList", VendaDAO.getInstance().getAllVendaByRenavam((String)request.getParameter("renavam")));
 					break;
 				case "periodo":
-					request.setAttribute("recebeList", RecebeDAO.getInstance().getAllRecebeByPeriod(Date.valueOf(request.getParameter("intervaloInicio")), Date.valueOf(request.getParameter("intervaloFim"))));
+					request.setAttribute("vendaList", VendaDAO.getInstance().getAllVendaByPeriod(Date.valueOf(request.getParameter("intervaloInicio")), Date.valueOf(request.getParameter("intervaloFim"))));
 					break;
+				case "valor":
+					request.setAttribute("vendaList", VendaDAO.getInstance().getAllVendaByValorMaiorQue(Float.valueOf(request.getParameter("valor"))));
+					break;
+				
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

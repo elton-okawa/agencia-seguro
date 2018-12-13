@@ -71,10 +71,50 @@
 		<div class="col-sm-3">
 			<a class="btn btn-info btn-block" href="ControleRecebe?type=renavam">Recebe por RENAVAM</a>
 		</div>
+		<div class="col-sm-3 mt-4">
+			<a class="btn btn-info btn-block" href="ControleRecebe?type=periodo">Recebe por Período</a>
+		</div>
 	</div>
+	
 	<div class="row mt-4">
 		<div class="col-sm-3">
-			<a class="btn btn-info btn-block" href="ControleRecebe?type=periodo">Recebe por Período</a>
+			<a class="btn btn-primary btn-block" href="ControleVenda?type=all">Venda</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleVenda?type=idCliente">Venda por IdCliente</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleVenda?type=idFuncionario">Venda por IdFuncionário</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleVenda?type=renavam">Venda por RENAVAM</a>
+		</div>
+		<div class="col-sm-3 mt-4">
+			<a class="btn btn-info btn-block" href="ControleVenda?type=periodo">Venda por Período</a>
+		</div>
+		<div class="col-sm-3 mt-4">
+			<a class="btn btn-info btn-block" href="ControleVenda?type=valor">Venda por Valor</a>
+		</div>
+	</div>
+	
+	<div class="row mt-4">
+		<div class="col-sm-3">
+			<a class="btn btn-primary btn-block" href="ControleCompra?type=all">Compra</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleCompra?type=idCliente">Compra por IdCliente</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleCompra?type=idFuncionario">Compra por IdFuncionário</a>
+		</div>
+		<div class="col-sm-3">
+			<a class="btn btn-info btn-block" href="ControleCompra?type=renavam">Compra por RENAVAM</a>
+		</div>
+		<div class="col-sm-3 mt-4">
+			<a class="btn btn-info btn-block" href="ControleCompra?type=periodo">Compra por Período</a>
+		</div>
+		<div class="col-sm-3 mt-4">
+			<a class="btn btn-info btn-block" href="ControleCompra?type=valor">Compra por Valor</a>
 		</div>
 	</div>
 	

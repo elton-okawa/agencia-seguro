@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import model.Compra;
+import model.Venda;
 
 public class CompraDAO extends DAO<Compra>{
 
@@ -19,6 +20,11 @@ public class CompraDAO extends DAO<Compra>{
 		return instance;
 	}
 	
+	public List<Compra> getAll() throws SQLException {
+		String query = String.format("SELECT * FROM CompraDB");
+		return super.getAll(query);
+	}
+	
 	public List<Compra> getAllCompraByIdCliente (int idCliente) throws SQLException {
 		String query = String.format("SELECT * FROM CompraDB WHERE IdCliente=%d", idCliente);
 		return super.getAll(query);
@@ -29,7 +35,7 @@ public class CompraDAO extends DAO<Compra>{
 		return super.getAll(query);
 	}
 
-	public List<Compra> getAllCompraByIdRenavam (String renavam) throws SQLException {
+	public List<Compra> getAllCompraByRenavam (String renavam) throws SQLException {
 		String query = String.format("SELECT * FROM CompraDB WHERE Renavam='%s'", renavam);
 		return super.getAll(query);
 	}
@@ -40,12 +46,12 @@ public class CompraDAO extends DAO<Compra>{
 	}
 	
 	public List<Compra> getAllCompraByValorMaiorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra >= %2.f", valor);
+		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra >= '%f'", valor);
 		return super.getAll(query);
 	}
 	
 	public List<Compra> getAllCompraByValorMenorQue (float valor) throws SQLException {
-		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra <= %2.f", valor);
+		String query = String.format("SELECT * FROM CompraDB WHERE ValorCompra <= '%f'", valor);
 		return super.getAll(query);
 	}
 	
@@ -57,7 +63,7 @@ public class CompraDAO extends DAO<Compra>{
 		compra.setCliente(ClienteDAO.getInstance().getClienteByID(resultSet.getInt("IdCliente")));
 		compra.setDataCompra(resultSet.getDate("DataCompra"));
 		compra.setFuncionario(FuncionarioDAO.getInstance().getFuncionarioByID(resultSet.getInt("IdFuncionario")));
-		compra.setValor(resultSet.getFloat("Valor"));
+		compra.setValor(resultSet.getFloat("ValorCompra"));
 		return compra;
 	}
 }
