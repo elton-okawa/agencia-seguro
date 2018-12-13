@@ -112,20 +112,32 @@ INSERT INTO ServicoDB (IdServico, Tipo, Descricao)
 VALUES (5, "Manutenção", "Manutenção elétrica");
 
 -- PRESTA 
-INSERT INTO PrestaDB (IdServico, CNPJ)
-VALUES (1, "05.249.838/0001-37");
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (1, "05.249.838/0001-37", 500.00);
 
-INSERT INTO PrestaDB (IdServico, CNPJ)
-VALUES (2, "44.496.208/0001-19");
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (2, "05.249.838/0001-37", 3000.00);
 
-INSERT INTO PrestaDB (IdServico, CNPJ)
-VALUES (3, "39.047.781/0001-05");
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (3, "05.249.838/0001-37", 8000.00);
 
-INSERT INTO PrestaDB (IdServico, CNPJ)
-VALUES (4, "43.675.636/0001-46");
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (4, "05.249.838/0001-37", 10000.00);
 
-INSERT INTO PrestaDB (IdServico, CNPJ)
-VALUES (5, "79.477.932/0001-80");
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (5, "05.249.838/0001-37", 5000.00);
+
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (2, "44.496.208/0001-19", 5000.00);
+
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (3, "39.047.781/0001-05", 3000.00);
+
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (4, "43.675.636/0001-46", 1000.00);
+
+INSERT INTO PrestaDB (IdServico, CNPJ, Valor)
+VALUES (5, "79.477.932/0001-80", 2000.00);
 
 -- CARRO 
 INSERT INTO CarroDB (Renavam, Marca, Modelo, Cor, Ano, NumeroPortas, Status)
@@ -236,6 +248,18 @@ VALUES ("07479653728", "2018-12-01", 12, 2, 100000.00);
 -- RECEBE 
 INSERT INTO RecebeDB (Renavam, IdServico, CNPJ, DataInicio, DataFim)
 VALUES ("46619734653", 1, "05.249.838/0001-37", "2015-10-02", "2015-10-03");
+
+INSERT INTO RecebeDB (Renavam, IdServico, CNPJ, DataInicio, DataFim)
+VALUES ("46619734653", 2, "05.249.838/0001-37", "2015-10-02", "2015-10-10");
+
+INSERT INTO RecebeDB (Renavam, IdServico, CNPJ, DataInicio, DataFim)
+VALUES ("46619734653", 3, "05.249.838/0001-37", "2015-10-02", "2015-10-13");
+
+INSERT INTO RecebeDB (Renavam, IdServico, CNPJ, DataInicio, DataFim)
+VALUES ("46619734653", 4, "05.249.838/0001-37", "2015-10-02", "2015-10-13");
+
+INSERT INTO RecebeDB (Renavam, IdServico, CNPJ, DataInicio, DataFim)
+VALUES ("46619734653", 5, "05.249.838/0001-37", "2015-10-02", "2015-10-23");
 
 INSERT INTO RecebeDB (Renavam, IdServico, CNPJ, DataInicio, DataFim)
 VALUES ("19511317787", 2, "44.496.208/0001-19", "2015-10-07", "2015-10-18");
