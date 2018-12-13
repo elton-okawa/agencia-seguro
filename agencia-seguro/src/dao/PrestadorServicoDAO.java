@@ -30,7 +30,7 @@ public class PrestadorServicoDAO extends DAO<PrestadorServico>{
 	}
 	
 	@Override
-	protected PrestadorServico instantiateObject(ResultSet resultSet) throws SQLException {
+	public PrestadorServico instantiateObject(ResultSet resultSet) throws SQLException {
 		PrestadorServico prestadorServico = new PrestadorServico();
 		
 		prestadorServico.setFuncionario(

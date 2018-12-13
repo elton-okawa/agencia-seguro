@@ -44,7 +44,7 @@ public class FuncionarioDAO extends DAO<Funcionario>{
 	}
 
 	@Override
-	protected Funcionario instantiateObject(ResultSet resultSet) throws SQLException {
+	public Funcionario instantiateObject(ResultSet resultSet) throws SQLException {
 		Funcionario funcionario = new Funcionario();
 		
 		funcionario.setCPF(resultSet.getString("CPF"));

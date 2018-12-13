@@ -30,7 +30,7 @@ public class ServicoDAO extends DAO<Servico>{
 	}
 	
 	@Override
-	protected Servico instantiateObject(ResultSet resultSet) throws SQLException {
+	public Servico instantiateObject(ResultSet resultSet) throws SQLException {
 		Servico servico = new Servico();
 		servico.setIdServico(resultSet.getInt("IdServico"));
 		servico.setTipo(resultSet.getString("Tipo"));

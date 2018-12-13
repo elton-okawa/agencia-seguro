@@ -45,7 +45,7 @@ public class RecebeDAO extends DAO<Recebe>{
 	}
 	
 	@Override
-	protected Recebe instantiateObject(ResultSet resultSet) throws SQLException {
+	public Recebe instantiateObject(ResultSet resultSet) throws SQLException {
 		Recebe recebe = new Recebe();
 		recebe.setCarro(CarroDAO.getInstance().getCarroByRenavam(resultSet.getString("Renavam")));
 		recebe.setServico(ServicoDAO.getInstance().getServicoByID(resultSet.getInt("IdServico")));

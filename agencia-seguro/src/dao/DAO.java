@@ -57,5 +57,5 @@ public abstract class DAO<T>{
 		return objectList;
 	}
 	
-	protected abstract T instantiateObject(ResultSet resultSet) throws SQLException;
+	public abstract T instantiateObject(ResultSet resultSet) throws SQLException;
 }

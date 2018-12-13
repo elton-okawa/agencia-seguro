@@ -41,7 +41,7 @@ public class ClienteDAO extends DAO<Cliente>{
 	}
 
 	@Override
-	protected Cliente instantiateObject(ResultSet resultSet) throws SQLException {
+	public Cliente instantiateObject(ResultSet resultSet) throws SQLException {
 		Cliente cliente = new Cliente();
 		
 		cliente.setCPF(resultSet.getString("CPF"));

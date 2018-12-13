@@ -31,7 +31,7 @@ public class CarroDAO extends DAO<Carro>{
 	}
 	
 	@Override
-	protected Carro instantiateObject(ResultSet resultSet) throws SQLException {
+	public Carro instantiateObject(ResultSet resultSet) throws SQLException {
 		Carro carro = new Carro();
 		
 		carro.setRenavam(resultSet.getString("Renavam"));
